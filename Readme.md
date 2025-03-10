@@ -41,7 +41,7 @@ The location where you clone this repository is the code directory. The structur
 
 ### Dataset Directory
 
-The `datasets` folder serve as the dataset directory. After cloning this repository, move `datasets` to a hard drive with >5GB remaining spaces. After finishing the dataset preprocessing, the structure of the dataset directory should look like
+The `datasets` folder serves as the dataset directory. After cloning this repository, move `datasets` to a hard drive with >5GB remaining spaces. After finishing the dataset preprocessing, the structure of the dataset directory should look like
 
     datasets
     └── MedleyDB     
