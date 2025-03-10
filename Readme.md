@@ -32,7 +32,6 @@ The location where you clone this repository is the code directory. The structur
     ├── inst_utils.py                   Instrument utils when only using MJN dataset
     ├── lightning_model.py              Define PyTorch Lightning models
     ├── lightning_test.py               Testing the model with Lightning model's test_step 
-    ├── lightning_train_v100.py         Train the model with PyTorch Lightning (for V100 GPU)
     ├── lightning_train.py              Train the model with PyTorch Lightning (for RTX 3090 GPU)
     ├── Readme.md                       
     ├── requirements.txt                Required packages
