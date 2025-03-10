@@ -1,7 +1,7 @@
 This repository is being updated.
 
 # Lead Instrument Detection from Multitrack Music
-[ [Paper](https://arxiv.org/pdf/2503.03232){:target="_blank"} | [GitHub Repo](https://github.com/Sonata165/LeadInstrumentDetection){:target="_blank"} ]
+[ [Paper](https://arxiv.org/pdf/2503.03232) | [GitHub Repo](https://github.com/Sonata165/LeadInstrumentDetection) ]
 
 This is the official code repository of the ICASSP 2025 paper Lead Instrument Detection from Multitrack Music. The components of this repository include:
 - Lead instrument annotation for the MedleyDB v1 dataset.
