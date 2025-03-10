@@ -117,7 +117,9 @@ Train the model with
     python lightning_train.py [path/to/corresponding/hparam]
     
     e.g.
-    python lightning_train.py hparams/ch_cls/ch_permute.yaml    # train the final model
+    python lightning_train.py hparams/ch_cls/ch_permute.yaml    # train our final model
+
+Note: below hparam file used the MJN dataset for training. You may need to adjust the dataset path to correctly train the model with MedleyDB.
 
 With the latest training script, the testing will be automatically executed after training finish. Testing will be perform twice, once on validation set, the second is on the testing set. Objective metrics will be computed for both datasets. The results will be shown in the command line with beautiful tables.
 
