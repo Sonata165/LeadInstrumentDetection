@@ -1,0 +1,43 @@
+
+result_root: /home/longshen/data/results
+out_dir: mjn_5pfm/cross_dataset/train_with_mjn_instcls/bs4_ep5_lr1e-4
+
+train:
+  n_epoch: 5
+  lr: 0.0001
+  attn_lr: 0.00001 # 1e-5 for baseline
+  mert_lr: 0.00001 
+  weight_decay: 0.01
+  warmup_steps: 0
+  val_check_interval: 0.25 # 0.2
+  lr_anneal_patience: 4 # 3
+  earlystop_patience: 8 # 10
+  grad_accumulate: 4
+  fast_dev_run: False # 20
+  lr_scheduler: anneal # anneal | linear | exponential
+  gamma: 0.1 # For exponential scheduler
+
+model:
+  lit_model: LitMertSoloInst
+  model_class: MertSoloDetectorByChannel
+  mert_url: /home/longshen/data/mert # m-a-p/MERT-v1-95M
+  num_inst_type: 34 # See misc/inst_id_to_inst_name.json   # will be modified by the tokenizer in training script
+  max_channel_num: 28
+  mix_ch_id: 23 # The instrument id that belong to the mixture stem
+  attn_drop: 0.8
+  attn_heads: 12
+  freeze_mert: False
+  na_inst_id: 24
+
+dataset:
+  data_root: /home/longshen/data/datasets/MedleyDB/v1_segmented  # /home/longshen/data/datasets/MJN/segmented/5perfs
+  dataset_class: MJNDataset
+  cross_dataset_tokenizer: True
+  meta_fn: metadata.json
+  batch_size: 1
+  src_sr: 48000
+  tgt_sr: 24000
+  segment_length: 5
+  label_frame_rate: 75
+  num_workers: 4
+  ch_permute_aug: True

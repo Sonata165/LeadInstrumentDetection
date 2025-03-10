@@ -1,0 +1,90 @@
+{
+  "annotations": [
+    {
+      "annotation_metadata": {
+        "curator": {
+          "name": "",
+          "email": ""
+        },
+        "annotator": {},
+        "version": "0.1.5",
+        "corpus": "",
+        "annotation_tools": "",
+        "annotation_rules": "",
+        "validation": "",
+        "data_source": "MSAF"
+      },
+      "data": [
+        {
+          "time": 0.0,
+          "duration": 0.417959,
+          "value": "A",
+          "confidence": null
+        },
+        {
+          "time": 0.417959,
+          "duration": 8.312744,
+          "value": "@",
+          "confidence": null
+        },
+        {
+          "time": 8.730703,
+          "duration": 24.845351,
+          "value": "@",
+          "confidence": null
+        },
+        {
+          "time": 33.576054,
+          "duration": 11.609977,
+          "value": "@",
+          "confidence": null
+        },
+        {
+          "time": 45.186032000000004,
+          "duration": 11.052698000000001,
+          "value": "@",
+          "confidence": null
+        },
+        {
+          "time": 56.238730000000004,
+          "duration": 7.151746,
+          "value": "@",
+          "confidence": null
+        },
+        {
+          "time": 63.39047600000001,
+          "duration": 0.011519000000000001,
+          "value": "A",
+          "confidence": null
+        }
+      ],
+      "sandbox": {
+        "boundaries_id": "sf",
+        "labels_id": null,
+        "timestamp": "2017/03/20 19:07:44",
+        "annot_beats": false,
+        "feature": "pcp",
+        "framesync": false,
+        "M_gaussian": 27,
+        "m_embedded": 3,
+        "k_nearest": 0.04,
+        "Mp_adaptive": 28,
+        "offset_thres": 0.05,
+        "bound_norm_feats": Infinity,
+        "hier": false
+      },
+      "namespace": "segment_open",
+      "time": 0,
+      "duration": null
+    }
+  ],
+  "file_metadata": {
+    "title": "",
+    "artist": "",
+    "release": "",
+    "duration": 63.45142857142857,
+    "identifiers": {},
+    "jams_version": "0.2.1"
+  },
+  "sandbox": {}
+}

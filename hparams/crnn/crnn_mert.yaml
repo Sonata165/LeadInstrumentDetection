@@ -1,0 +1,38 @@
+
+result_root: /home/longshen/data/results
+out_dir: mjn_5pfm/instcls/crnn/mert_feat/lr1e-3
+
+train:
+  n_epoch: 2
+  lr: 0.001
+  attn_lr: 0.000001
+  mert_lr: 0.00001
+  weight_decay: 0
+  warmup_steps: 500
+  val_check_interval: 0.2 # Validate every X epoch
+  lr_anneal_patience: 5 # 3
+  earlystop_patience: 10
+  grad_accumulate: 1
+  fast_dev_run: False # 20
+
+model:
+  lit_model: LitMertSoloInst
+  model_class: MultiChannelMertCRNN
+  mert_url: /home/longshen/data/mert # m-a-p/MERT-v1-95M
+  num_inst_type: 16 # See misc/inst_id_to_inst_name.json
+  mix_ch_id: 10
+  attn_drop: 0.5
+  attn_heads: 8
+  freeze_mert: True
+  chcls: False
+
+dataset:
+  data_root: /home/longshen/data/datasets/MJN/segmented/5perfs
+  dataset_class: MJNDataset
+  meta_fn: metadata.json
+  batch_size: 4
+  src_sr: 48000
+  tgt_sr: 24000
+  segment_length: 5
+  label_frame_rate: 75
+  num_workers: 4

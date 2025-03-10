@@ -1,4 +1,8 @@
 .DS_Store
+_local
+_bak
+_archived
+.features_msaf_tmp.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,31 @@
+
+result_root: /home/longshen/data/results
+out_dir: mjn_5pfm/instcls/chavg_ft/lr1e-3
+
+train:
+  n_epoch: 10
+  lr: 0.001 
+  mert_lr: 0.00001
+  weight_decay: 0
+  warmup_steps: 0
+  val_check_interval: 0.2 # Validate every X epoch
+  lr_anneal_patience: 5 # 3
+  earlystop_patience: 10
+
+model:
+  model_class: MertSoloDetectorInstEmb
+  mert_url: /home/longshen/data/mert # m-a-p/MERT-v1-95M
+  num_inst_type: 16 # 14 inst + 1 na + 0 reserved for padding
+  mix_ch_id: 10
+  freeze_mert: False
+
+dataset:
+  data_root: /home/longshen/data/datasets/MJN/segmented/5perfs
+  dataset_class: MJNDataset
+  meta_fn: metadata.json
+  batch_size: 4
+  src_sr: 48000
+  tgt_sr: 24000
+  segment_length: 5
+  label_frame_rate: 75
+  num_workers: 4

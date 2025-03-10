@@ -1,0 +1,190 @@
+{
+    "2-1": {
+        "sax": 255,
+        "key": 139,
+        "sax_2": 61,
+        "trumpet": 58,
+        "drum": 30,
+        "e-bass": 12,
+        "na": 6
+    },
+    "2-2": {
+        "e-guitar": 277,
+        "vocal": 276,
+        "drum": 14,
+        "na": 7
+    },
+    "2-3": {
+        "kantele": 241,
+        "vocal": 115,
+        "na": 7
+    },
+    "2-4": {
+        "vocal": 284,
+        "e-guitar_2": 208,
+        "e-guitar": 21,
+        "na": 10,
+        "drum": 7,
+        "e-bass": 2
+    },
+    "2-5": {
+        "vocal": 358,
+        "e-guitar_2": 164,
+        "e-guitar": 153,
+        "organ": 110,
+        "na": 6,
+        "drum": 3
+    },
+    "3-1": {
+        "synth": 263,
+        "sax": 116,
+        "e-guitar": 85,
+        "key_2": 66,
+        "key": 35,
+        "drum": 11,
+        "na": 4
+    },
+    "3-2": {
+        "e-guitar": 117,
+        "vocal": 93,
+        "brass": 77,
+        "key": 44,
+        "back-vocal": 15,
+        "drum": 12
+    },
+    "3-3": {
+        "key": 313,
+        "e-guitar": 93,
+        "back-vocal": 16,
+        "drum": 14,
+        "na": 9,
+        "e-bass": 4
+    },
+    "3-4": {
+        "synth": 319,
+        "key": 98,
+        "e-bass": 20,
+        "na": 2
+    },
+    "3-5": {
+        "vocal": 442,
+        "brass": 91,
+        "key": 40,
+        "e-guitar": 38,
+        "e-bass": 10,
+        "na": 8,
+        "drum": 2
+    },
+    "4-1": {
+        "e-guitar": 250,
+        "key": 196,
+        "drum": 4,
+        "na": 4
+    },
+    "4-2": {
+        "vocal": 218,
+        "e-guitar": 132,
+        "na": 4,
+        "drum": 4
+    },
+    "4-3": {
+        "vocal": 391,
+        "e-guitar": 72,
+        "drum": 12,
+        "na": 10,
+        "key": 10,
+        "e-bass": 4
+    },
+    "4-4": {
+        "key": 370,
+        "na": 4
+    },
+    "4-5": {
+        "vocal": 342,
+        "key": 72,
+        "e-guitar": 65,
+        "pc": 23,
+        "na": 5,
+        "drum": 5
+    },
+    "14-1": {
+        "vocal": 312,
+        "e-guitar": 179,
+        "drum": 12,
+        "e-bass": 9,
+        "na": 7,
+        "back-vocal": 7
+    },
+    "14-2": {
+        "e-guitar": 267,
+        "vocal": 115,
+        "e-bass": 39,
+        "pc": 30,
+        "na": 4,
+        "drum": 4
+    },
+    "14-3": {
+        "vocal": 172,
+        "key": 124,
+        "sax": 121,
+        "e-guitar": 55,
+        "e-bass": 40,
+        "drum": 30,
+        "na": 2
+    },
+    "14-4": {
+        "a-guitar_3": 161,
+        "a-guitar_2": 60,
+        "a-guitar_4": 37,
+        "a-guitar": 37,
+        "na": 1
+    },
+    "14-5": {
+        "vocal": 211,
+        "trumpet": 61,
+        "e-guitar": 27,
+        "sax_2": 25,
+        "sax": 24,
+        "key": 18,
+        "drum": 14,
+        "back-vocal": 13,
+        "e-bass": 6,
+        "na": 4
+    },
+    "15-1": {
+        "vocal": 404,
+        "pc": 143,
+        "e-guitar": 9,
+        "na": 7,
+        "e-bass": 3,
+        "drum": 2
+    },
+    "15-2": {
+        "vocal": 339,
+        "e-guitar": 244,
+        "drum": 5,
+        "na": 4,
+        "e-bass": 2
+    },
+    "15-3": {
+        "sax": 182,
+        "e-guitar": 112,
+        "key": 97,
+        "synth": 95,
+        "na": 4,
+        "drum": 2
+    },
+    "15-4": {
+        "vocal": 383,
+        "e-guitar": 121,
+        "back-vocal": 110,
+        "na": 5,
+        "drum": 2
+    },
+    "15-5": {
+        "vocal": 269,
+        "e-guitar": 186,
+        "na": 6,
+        "drum": 5
+    }
+}

@@ -1,0 +1,41 @@
+
+result_root: /home/longshen/data/results
+out_dir: mjn_5pfm/chcls/chattn/ch_permute_freeze/bs16_drop0.8
+
+train:
+  n_epoch: 5
+  mert_lr: 0.00001
+  attn_lr: 0.00001 # 1e-5 for baseline
+  lr: 0.001
+  weight_decay: 0.01
+  warmup_steps: 0
+  val_check_interval: 0.25 # 0.2
+  lr_anneal_patience: 4 # 3
+  earlystop_patience: 8 # 10
+  grad_accumulate: 4 # 4
+  fast_dev_run: False # 20
+  lr_scheduler: anneal
+
+model:
+  lit_model: LitMertSoloChannel
+  model_class: MertSoloDetectorChattnChcls
+  mert_url: /home/longshen/data/mert # m-a-p/MERT-v1-95M
+  num_inst_type: 16 # See misc/inst_id_to_inst_name.json
+  max_channel_num: 16 # Just a guess
+  mix_ch_id: 0
+  attn_drop: 0.8
+  attn_heads: 12
+  freeze_mert: True
+  train_last_layer: False
+
+dataset:
+  data_root: /home/longshen/data/datasets/MJN/segmented/5perfs
+  dataset_class: MJNDatasetCh
+  meta_fn: metadata.json
+  batch_size: 4
+  src_sr: 48000
+  tgt_sr: 24000
+  segment_length: 5
+  label_frame_rate: 75
+  num_workers: 4
+  ch_permute_aug: True
