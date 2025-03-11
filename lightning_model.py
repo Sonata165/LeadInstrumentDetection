@@ -22,7 +22,10 @@ def load_lit_model(config):
     Load a lightning model from the latest Lightning checkpoint
     '''
     out_dir = jpath(config['result_root'], config['out_dir'])
-    latest_version_dir, ckpt_fp = get_latest_checkpoint(out_dir)
+    if 'ckpt_fp' not in config['model'] or config['model']['ckpt_fp'] is None:
+        latest_version_dir, ckpt_fp = get_latest_checkpoint(out_dir)
+    else:
+        ckpt_fp = config['model']['ckpt_fp']
     lit_model_cls = eval(config.model.lit_model) if 'lit_model' in config.model else LitMertSoloInst
     l_model = lit_model_cls.load_from_checkpoint(ckpt_fp, model_config=config.model, train_config=config.train, infer=True)
     return l_model

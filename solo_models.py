@@ -15,7 +15,7 @@ def get_model(model_config):
     model = model_class(model_config)
     return model
 
- 
+
 class MertSoloDetectorFromMix(nn.Module):
     '''
     From Mix model

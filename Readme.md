@@ -72,10 +72,11 @@ The `datasets` folder serves as the dataset directory. After cloning this reposi
     
     # The experiments were conducted on some old machines that require a low CUDA versions
     # But you may also try newer python, pytorch, and CUDA if your machine support them
+
     conda create -n solo python=3.7
     conda activate solo
 
-    # Install pytorch (a low version of torch is required due to low CUDA driver on Shannon and Neumann)
+    # Install pytorch
     pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
     
     # May need the below patch for the torchaudio backend
@@ -100,7 +101,7 @@ Here are the procedures we adopted to annotate the MedleyDB v1 dataset.
 ### Constructing segment-level dataset
 
 Overall data preprocessing steps:
-1. Create the metadata for segment-level dataset
+1. Create the metadata for segment-level dataset (obtain metadata_seg.json)
 2. Segment the audios to segment-level according to metadata
 3. Split the dataset
 4. Some final adjustment to the format of the metadata
@@ -109,8 +110,34 @@ Run `segment_dataset_medley.py` to do these jobs.
 
 Finally, after obtaining the segment-level dataset, we can do training and testing. It's better to move the data to the server because with GPU the training runs faster.
 
-## Training and Testing
+### Using the MedleyDB dataset
+To use the MedleyDB dataset for training or testing, please first obtain the original dataset from its [official site](https://medleydb.weebly.com/). Then, segment the raw audio files into short chunks according to the provided `metadata_seg.json`. Please see the `segment_dataset_medley.py` for details.
 
+If you meet any difficulties when processing the dataset, kindly contact the author Longshen Ou by oulongshen@u.nus.edu.
+
+
+## Pre-Trained Models
+
+### Model Checkpoints
+We release below model checkpoints to facilitate future study on this topic:
+
+| Model Name | Training Set(s) | Input | Hparam |
+|----------|----------|----------|----------|
+| [Frame-level Track Classification](https://huggingface.co/LongshenOu/lead-inst-track-cls-mjn)  | MJN   | Multitrack | track_cls_mjn.jaml |
+| [Frame-level Track Classification](https://huggingface.co/LongshenOu/lead-inst-track-cls-medleydb)  | MedleyDB   | Multitrack | track_cls_medley.jaml |
+| [Frame-level Track classification](https://huggingface.co/LongshenOu/lead-inst-track-cls-mjn-medleydb)  | MedleyDB + MJN   | Multitrack | track_cls_both.jaml |
+| [Segment-level guitar classification](https://huggingface.co/LongshenOu/guitar-solo-segment-cls-mjn) | MJN | Single mixture track | guitar_seg_mjn.jaml |
+
+### Use Pre-Trained Models
+You can conduct inference with the provided model checkpoints. After preparing the segment-level dataset, do it with
+    
+    python lightning_test.py [path/to/corresponding/hparam]
+    
+    e.g.
+    python lightning_train.py hparams/released/track_cls_medley.yaml    # train our final model
+
+## Training and Testing
+You can also train a model yourself with below command.
 
 Train the model with
     
