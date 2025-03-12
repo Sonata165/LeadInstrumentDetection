@@ -129,7 +129,7 @@ We release below model checkpoints to facilitate future study on this topic:
 | [Segment-level guitar classification](https://huggingface.co/LongshenOu/guitar-solo-segment-cls-mjn) | MJN | Single mixture track | guitar_seg_mjn.jaml |
 
 ### Use Pre-Trained Models
-You can conduct inference with the provided model checkpoints. After preparing the segment-level dataset, modify the `ckpt_fp` correspondingly in the hparam file. Then run the inference with
+You can conduct inference with the provided model checkpoints. After preparing the segment-level dataset, download the desired checkpoints with the link above, and then modify the `ckpt_fp` correspondingly in the hparam file. Please run the inference with
     
     python lightning_test.py [path/to/corresponding/hparam]
     
