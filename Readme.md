@@ -45,6 +45,7 @@ The `datasets` folder serves as the dataset directory. After cloning this reposi
 
     datasets
     └── MedleyDB     
+        ├── metadata_song.json          Song-level annotation (to facilitate other ways of dataset segmentation)
         └── v1_segmented
             ├── data                    The folder containing all segment-level audios
                 ├── AClassicEdu...      Song name (of the first song)
